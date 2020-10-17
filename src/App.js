@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Grid, Header} from 'semantic-ui-react';
+import "semantic-ui-css/semantic.min.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends React.PureComponent {
+    render() {
+        return (
+            <div style={{textAlign: 'center'}}>
+                <Grid style={{padding: '1em 2em'}}>
+                    <Grid.Row>
+                        <Grid.Column>
+                            <Header as='h1' dividing>
+                                Peptalk Toolkit
+                            </Header>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <Grid.Column>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </div>
+        );
+    }
 }
 
-export default App;
